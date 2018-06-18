@@ -28,18 +28,38 @@
     &__left {
         width: 33.333333%;
         display: table-cell;
+
+        @include respond(tab-port) {
+            width: 100%;
+            display: block;
+            padding: 3rem 5rem;
+            overflow: hidden;
+            padding-bottom: 0;
+            
+        }
     }
+
 
     &__right {
         width: 66.66666%;
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(tab-port) {
+            width: 100%;
+            display: block;
+        }
     }
 
     &__img {
         display: block;
         width: 100%;
+
+        @include respond(tab-port) {
+            width: 50%;
+            float: left;
+        }
     }
 
     &__text {
@@ -58,6 +78,11 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include respond(phone) {
+             -moz-column-count: 1;
+             column-count: 1;
+        }
     }
 
     
