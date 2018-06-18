@@ -1,4 +1,10 @@
 .DS_Store
 
 # Dependency directories
+<<<<<<< HEAD
 node_modules
+=======
+node_modules
+
+package-lock.json
+>>>>>>> 30323441975ae0cc9968aa137c6b35f36dd66f57
