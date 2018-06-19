@@ -23,6 +23,13 @@
         transform: translate(-50%, -50%) scale(.25);
         opacity: 0;
         transition: all .5s .2s; 
+
+        @include respond(phone) {
+            width: 100%;
+            overflow: scroll;
+        }
+
+        
     }
 
     &__left {
@@ -95,8 +102,13 @@
     &:target &__content {
         transform: translate(-50%, -50%) scale(1);
         opacity: 1;
-    }
 
+        @media(max-height:600px) {
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0) scale(1);
+        }
+    }
 
 
     &__close {

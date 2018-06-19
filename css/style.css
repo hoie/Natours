@@ -541,6 +541,10 @@ body {
     transform: translate(-50%, -50%) scale(0.25);
     opacity: 0;
     transition: all .5s .2s; }
+    @media (max-width: 37.5em) {
+      .popup__content {
+        width: 100%;
+        overflow: scroll; } }
   .popup__left {
     width: 33.333333%;
     display: table-cell; }
@@ -590,6 +594,11 @@ body {
   .popup:target .popup__content {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1; }
+    @media (max-height: 600px) {
+      .popup:target .popup__content {
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0) scale(1); } }
   .popup__close:link, .popup__close:visited {
     color: #777;
     position: absolute;
